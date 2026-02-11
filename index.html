@@ -54,7 +54,6 @@ header h1 {
 }
 .section {
     padding: 80px 10%;
-    text-align: center;
 }
 footer {
     padding: 40px 10%;
@@ -62,40 +61,67 @@ footer {
     color: #777;
     border-top: 1px solid #222;
 }
-    <section class="section">
-  <h2>Featured Drop</h2>
-  <p style="color:#cccccc; max-width:700px; margin: 12px auto 28px;">
-    Limited quantity. First come, first served.
-  </p>
+    .drop{
+  display:grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 22px;
+  align-items: start;
+  max-width: 980px;
+  margin: 0 auto;
+  text-align:left;
+}
 
-  <div class="drop">
-    <div class="drop-img">Add Product Image</div>
+.drop-img{
+  height: 320px;
+  border-radius: 16px;
+  border: 1px dashed #333;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#777;
+  background:#121212;
+}
 
-    <div class="drop-info">
-      <h3>Versace Eros EDT 3.4oz (100ml)</h3>
-      <p style="color:#cccccc; margin: 10px 0 14px;">
-        Fresh mint, green apple, and warm vanilla/woods. Great daily wear and date scent.
-      </p>
+.drop-info h3{
+  font-size: 1.4rem;
+}
 
-      <div class="meta">
-        <span>✅ Authentic</span>
-        <span>📍 San Antonio pickup</span>
-        <span>🚚 Shipping available</span>
-        <span>⚡ Only 2 available</span>
-      </div>
+.meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap: 10px;
+  margin: 14px 0 18px;
+}
 
-      <div class="price-line">
-        <div class="price">$78</div>
-        <a class="button small" href="#" target="_blank" rel="noopener">Buy</a>
-      </div>
+.meta span{
+  border:1px solid #222;
+  background:#121212;
+  padding: 8px 10px;
+  border-radius: 999px;
+  font-size: .92rem;
+  color:#ddd;
+}
 
-      <p style="color:#777; margin-top: 12px;">
-        Local pickup price shown. Buyer pays shipping (USPS Ground Advantage).
-      </p>
-    </div>
-  </div>
-</section>
+.price-line{
+  display:flex;
+  gap: 14px;
+  align-items:center;
+}
 
+.price{
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.button.small{
+  display:inline-block;
+  padding: 12px 18px;
+}
+
+@media (max-width: 820px){
+  .drop{ grid-template-columns: 1fr; }
+  .drop-img{ height: 240px; }
+}
 </style>
 </head>
 <body>
@@ -143,8 +169,6 @@ footer {
     </div>
   </div>
 </section>
-
-
 <footer>
     © 2025 MKM Fragrances Co. All rights reserved.
 </footer>
