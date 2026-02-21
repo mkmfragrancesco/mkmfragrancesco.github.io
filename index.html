@@ -159,7 +159,15 @@ footer {
   </p>
 
   <div class="drop">
-    <div class="drop-img">Add Product Image</div>
+    <div class="image-gallery">
+  <img src="image1.jpg" alt="Versace Eros Front" class="main-image">
+
+  <div class="thumbs">
+    <img src="image1.jpg" onclick="document.querySelector('.main-image').src=this.src">
+    <img src="image2.jpg" onclick="document.querySelector('.main-image').src=this.src">
+    <img src="image3.jpg" onclick="document.querySelector('.main-image').src=this.src">
+  </div>
+</div>
 
     <div class="drop-info">
       <h3>Versace Eros EDT 3.4oz (100ml)</h3>
