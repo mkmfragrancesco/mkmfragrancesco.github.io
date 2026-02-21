@@ -124,6 +124,16 @@ footer {
   padding: 12px 18px;
 }
 
+.button.outline{
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid #444;
+}
+
+.button.outline:hover{
+  background:#222;
+}
+
 @media (max-width: 820px){
   .drop{ grid-template-columns: 1fr; }
   .drop-img{ height: 240px; }
@@ -167,7 +177,21 @@ footer {
       <div class="price-line">
         <div class="price">$78</div>
         <a class="button small" href="https://buy.stripe.com/8x2aEX5Rk4eIdUFd3GcZa00" target="_blank" rel="noopener">Buy</a>
-      </div>
+      </div><div class="price-line">
+  <div class="price">$78</div>
+
+  <a class="button small"
+     href="SHIPPING_LINK"
+     target="_blank" rel="noopener">
+     Buy
+  </a>
+
+  <a class="button small outline"
+     href="PICKUP_LINK"
+     target="_blank" rel="noopener">
+     Local Pickup
+  </a>
+</div>
         
 <p class="fineprint">
   + shipping &amp; applicable sales tax at checkout.
